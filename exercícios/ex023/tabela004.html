@@ -34,13 +34,31 @@
         <thead>
             <tr>
                 <th scope="col">Grupos</th>
+                <!-- tem que indicar o scopo do th - 
+                 
+                nesse caso está em coluna= 'col'-->
                 <th scope="col">Nomes</th>
                 <th colspan="3" scope="colgroup">Filmes</th>
+                <!-- esse escopo está ocupando três colunas
+                 
+                então eu tenho que dizer que ele é um SCOPE='COLGROUP' (conjunto de colunas) -->
             </tr>
         </thead>
+            <tfoot>
+                <tr>
+                    <th colspan="4" scope="row">total</th>
+                    <!-- scope='row'
+                     
+                    porque não é um grupo de células-->
+                    <td>1000</td>
+                </tr>
+            </tfoot>
         <tbody>
             <tr>
                 <th rowspan="3" scope="rowgroup">Mulheres</th>
+                <!-- esse escopo é uma conjunto de LINHAS, porque está ocupando três linhas
+                 
+                então eu tenho que dizer que ele é um scope=rowgroup (conjunto de linhas)-->
                 <td>Ana Maria Santos</td>
                 <td>Alien</td>
                 <td>Rambo</td>
