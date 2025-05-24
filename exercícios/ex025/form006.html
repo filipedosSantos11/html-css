@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="icor">Cor: </label>
+            <input type="color" name="cor" id="icor" value="#00ff00">
+
+            <!-- INPUT:COLOR - gera um campo para cor - pode ser que tenha diferentes resultados em outro navegadores, faça seus testes -->
+        </p>
+
+        <p>
+            <label for="inivel">Nível de Satisfação: </label>
+            <input type="range" name="nivel" id="inivel" min="1" max="5" value="2">
+
+            <!-- VALUE - é de onde vai começar, defina como quiser -->
+
+            <!-- min="1" max="5" - para dar uns saltos na barra de satisfação -->
+        </p>
+
+        <p>
+            <label for="ifoto">Foto do Perfil: </label>
+            <input type="file" name="foto" id="ifoto">
+
+            <!-- INPUT:FILE - para definir uma foto de perfil, permite escolher um arquivo local -->
+
+            <!-- quando for usar esse elemento de seleção de arquivo, terei que usar o metódo POST no formulário porque ultrapassa os 3000bytes -->
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
