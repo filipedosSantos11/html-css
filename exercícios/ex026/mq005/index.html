@@ -15,7 +15,7 @@
 
         <!-- ONCLICK - quando eu clicar -->
 
-        <!-- ONRESIZE - quando eu mudar o tamanho do site -->
+        <!-- ONRESIZE - quando eu mudar o tamanho da tela -->
 
         <menu id="itens">
             <ul>
@@ -48,11 +48,11 @@
             }
         }
 
-        function clickMenu() {
-            if (itens.style.display == 'block') {
-                itens.style.display = 'none'
+        function clickMenu() {  // função ao clicar no menu
+            if (itens.style.display == 'block') { // um clique para aparecer as opções
+                itens.style.display = 'none' // um segundo clique para esconder
             } else {
-                itens.style.display = 'block'
+                itens.style.display = 'block' // se o segundo clique não acontecer, as opções continuam visiveis
             }
         }
     </script>
