@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner {
+            display: flex;
+            background-color: lightsalmon;
+            
+            /* quando for usar COLUMN tem que declarar uma altura para o conteiner  */
+            flex-direction: row-reverse; 
+            flex-wrap: nowrap; 
+
+            flex-flow: row wrap; /* FLEX-FLOW - SHORTHAND */
+            
+            /* no CONTEINER temos que declarar DISPLAY: FLEX; 
+            para que o conteiner entre em modo flexbox */
+
+            /* em WRAP - ocorre uma quebra de linha - neste caso quebra pra baixo */
+
+            /* em WRAP-REVERSE - essa quebra ocorre pra cima */
+
+            /* NOWRAP - ROW = são configurações padrão */
+        }
+
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            
+
+            /* para os elementos ITENS declaramos FLEX: AUTO; - para que os itens se adaptem ao tamanho do conteiner - e só funciona para elementos filhos */
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item">exemplo de bloco A</div>
+        <div class="item">exemplo de bloco B</div>
+        <div class="item">exemplo de bloco C</div>
+        <div class="item">exemplo de bloco D</div>
+        <div class="item">exemplo de bloco E</div>
+        <div class="item">exemplo de bloco F</div>
+        <div class="item">exemplo de bloco G</div>
+
+    </div>
+</body>
+</html>
