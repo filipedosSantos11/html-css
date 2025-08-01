@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner {
+            display: flex;
+            background-color: lightsalmon;
+            height: 300px;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            align-items: flex-start;
+
+            /* JUSTIFY-CONTENT - é sempre no MAIN-AXIS 
+                FLEX-START - o elemento vai colar no início do eixo (padrão) 
+                FLEX-END - o elemento vai colar no final do eixo 
+                CENTER - vai centralizar 
+                SPACE-BETWEEN - primeiro e últimos elemento colado nos dois extremos e os outros com espaços iguais 
+                SPACE-EVENLY - espaçamento igual antes e depois dos elementos 
+                SPACE-AROUND - é quase igual a evenly, mas é diferente */
+
+            /* ALAIGN-ITEMS - é sempre no CROSS-AXIS - tem que dar altura pro conteiner
+                STRETCH - o elemento vai esticar (padrão) 
+                FLEX-START - o elemento vai colar no início do eixo 
+                FLEX-END - o elemento vai colar no final do eixo 
+                CENTER - vai centralizar */
+
+            /* no CONTEINER temos que declarar DISPLAY: FLEX; 
+            para que o conteiner entre em modo flexbox */
+        }
+
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            width: 100px;
+
+            /* para os elementos ITENS declaramos FLEX: AUTO; - para que os itens se adaptem ao tamanho do conteiner */
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+
+    </div>
+</body>
+</html>
