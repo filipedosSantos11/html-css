@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exemplos de flex-shrink</title>
+    <style>
+        div.conteiner {
+            display: flex;
+            background-color: lightsalmon;
+            flex-flow: row nowrap;
+            /* no CONTEINER temos que declarar DISPLAY: FLEX; 
+            para que o conteiner entre em modo flexbox */
+        }
+
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+            flex-shrink: 0; 
+            flex-grow: 1;
+
+           /* FLEX-SHRINK 0 - não vai encolher 
+                FLEX-SHRINK 1 - vai encolher */
+        }
+
+    </style>
+</head>
+<body>
+    <h2><ins>flex-shrink</ins> com valores diferentes de 0 e 1</h2>
+    <div class="conteiner">
+        <div class="item" style="flex-shrink: 2;">A</div>
+        <!-- =2 dessa forma vai diminuir o dobro -->
+
+        <div class="item" style="flex-shrink: 0;">B</div>
+        <!-- =1 somente o do meio vai encolher -->
+
+        <div class="item" style="flex-shrink: 1;">C</div>
+        <!-- =1 vai encolher normalmente -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exemplo de flex-grow</title>
+    <style>
+        div.conteiner {
+            display: flex;
+            background-color: lightsalmon;
+            flex-flow: row nowrap;
+            /* no CONTEINER temos que declarar DISPLAY: FLEX; 
+            para que o conteiner entre em modo flexbox */
+        }
+
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 250px;
+            flex-shrink: 1; 
+            flex-grow: 0;
+
+            /* FLEX-GROW 0 - não vai crescer 
+                FLEX0-GROW 1 - vai crescer */
+        }
+
+    </style>
+</head>
+<body>
+    <h2><ins>flex-grow</ins> com valores diferentes de 0 e 1</h2>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item" style="flex-grow: 1;">B</div>
+        <!-- neste caso só o do meio cresceu -->
+
+        <div class="item" style="flex-grow: 2;">C</div>
+        <!-- esse vai crescer o dobro do B, porque 2 é o dobro de 1 -->
+
+        <!-- SE DOIS ITENS TIVEREM O MESMO VALOR, TIPO 2 E 2
+         OS DOIS VÃO CRESCER NA MESMA PROPORÇÃO -->
+
+         <!-- ESSA PROPORÇÃO TEM QUE SER CALCULADA -->
+    </div>
+</body>
+</html>
