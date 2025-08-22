@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.conteiner {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 80px 40px 1fr 40px; /* quatro linhas */
+    grid-template-columns: 1fr 150px; /* duas colunas */
+    gap: 5px; /* espaçamento entre os items */
+}
+
+.caixa {
+    /* configuração de todo o grid */
+    background-color: lightgray;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+#topo {
+    grid-area: 1 / 1 / 2 / -1; 
+    /* linha inicial 1 - coluna inicial 1 - linha final 2 - coluna final -1 */
+}
+
+#menu {
+    grid-area: 2 / 1 / 3 / -1;
+    /* linha inicial 2 - coluna inicial 1 - linha final 3 - coluna final -1 */
+}
+
+#principal {
+    grid-area: 3 / 1 / -2 / 2;
+    /* linha inicial 3 - coluna inicial 1 - linha final -2 - coluna final 2 */
+}
+
+#secundario {
+    grid-area: 3 / 2 / -2 / -1;
+    /* linha inicial 3 - coluna inicial 2 - linha final -2 - coluna final -1 */
+}
+
+#rodape {
+    grid-area: 4 / 1 / -1 / -1;
+    /* linha inicial 4 - coluna inicial 1 - linha final -1 - coluna final -1 */
+}
